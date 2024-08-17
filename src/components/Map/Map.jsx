@@ -5,7 +5,13 @@ const Map = () => {
     return (
         <ComposableMap
             projection='geoMercator'
-            style={{ backgroundColor: 'pink' }}
+            projectionConfig={{
+                scale: 300,
+                center: [-110, 52]
+            }}
+            fill='white'
+            stroke='black'
+            stroke-width={3}
         >
             <Geographies geography={mapdata.data}>
                 {(geographies) => {
